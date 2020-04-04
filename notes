@@ -1,0 +1,36 @@
+about the api
+
+/products
+GET, POST (protected)
+/products/{id}
+GET, PATCH (protected), DELETE (protected)
+
+/orders
+GET, POST (protected)
+
+/orders/{id}
+GET, DELETE (protected)
+
+
+// development dependency
+npm install --save-dev nodemon
+
+note: we can get error by running nodemon server.js 
+because it not installed globally
+so solve this error go to package.json file and add in script
+"start":"nodemon server.js"
+
+log incomming request in console 
+for that need to install morgan (logging package for nodejs)
+in log message console will show how much time request take in process, 
+path, request method, etc.
+
+// cors handling, body-parser
+1. body-parser 
+parse diff types of body data like - urlencoded, json, etc.
+convert string to json object
+without body parsed server can't read request.body object
+
+2. cors (cross origin resource sharing)
+share resource with different types clients or we can specific to particular domain 
+so that only specific domain client can access resources
